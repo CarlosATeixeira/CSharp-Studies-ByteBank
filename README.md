@@ -1,42 +1,77 @@
-# 💼 ByteBank (C# Console Application)
+# 💰 ByteBank
 
 ## 📄 Description
-ByteBank is a C# console application developed as a learning project to practice object-oriented programming concepts such as encapsulation, inheritance, properties, method overloading, and class responsibilities.
 
-Throughout the project, multiple versions of `ContaCorrente`, `Cliente`, and `Program` demonstrate progressive enhancements in class design and functionality.
+ByteBank is a C# educational project that simulates a banking system while progressively introducing core OOP concepts such as encapsulation, composition, inheritance, polymorphism, and exception handling.
 
-## 🎯 Goals
-- Practice OOP with C#
-- Understand how data encapsulation and property validation works
-- Simulate a simple bank system with accounts and transactions
-- Explore class hierarchies (`Funcionario`, `Diretor`) and polymorphism
+Each folder or file group represents an incremental step in learning through hands-on implementation.
 
-## 🛠️ Technologies Used
-- C# (.NET Framework or .NET Core)
-- Console Application
+---
 
-## 🧱 Features
+## 📚 Features and Concepts
 
-- `ContaCorrente` with deposit, withdraw, and transfer methods
-- Validation logic in setters (`Saldo`, `Agencia`)
-- Static property to track number of accounts created
-- `Cliente` class evolution: from public fields to encapsulated properties
-- `Funcionario` and `Diretor` classes using inheritance and polymorphism for bonuses
-- `GerenciadorBonificacao` class to track total bonuses
+### 🧱 Basic Banking Logic
 
-## 📁 Structure Highlights
+-   Account creation with fields like agency, account number, and balance.
+-   Deposit, withdrawal, and transfer methods.
 
-- `Program.cs` (1–7): multiple exercises showing different evolution steps
-- `ContaCorrente.cs`: from basic structure to full-featured class with validation
-- `Cliente.cs`: refactored with auto-properties and CPF validation placeholder
-- `Funcionario` / `Diretor`: demonstrates inheritance and bonus calculation
-- `GerenciadorBonificacao`: manages multiple employee bonuses
+### 👥 Client and Ownership
+
+-   Composition between accounts and `Cliente` objects.
+-   Basic data validation for fields like CPF.
+
+### 🔐 Encapsulation
+
+-   Use of private fields with public properties for controlled access.
+-   Validation inside property setters (e.g., non-negative balance, valid agency).
+
+### 📈 Static Members
+
+-   Tracks total number of accounts created via static class members.
+-   Calculates `TaxaOperacao` dynamically based on number of accounts.
+
+### 🧠 Inheritance and Polymorphism
+
+-   `Funcionario` and `Diretor` classes.
+-   Base method `GetBonificacao()` overridden in derived classes.
+-   `GerenciadorBonificacao` accumulates bonuses from different employee types.
+
+### ⚠️ Exception Handling
+
+-   `ContaCorrente` constructors throw `ArgumentException` for invalid parameters.
+-   `try-catch` blocks used to manage runtime errors gracefully.
+
+---
+
+## 🗂️ Project Structure
+
+The code is organized by lesson or feature evolution:
+
+-   `_01_ByteBank` to `_07_ByteBank`: progressive improvements on `ContaCorrente` and `Cliente`
+-   `ByteBank.Funcionarios`: demonstrates inheritance and polymorphism
+-   Final version includes static logic, tax rate calculation and exception safety
+-   `Program.cs`: main runner files for each stage
+-   `GerenciadorBonificacao.cs`: centralizes bonus tracking
+
+---
+
+## 🛠️ Requirements
+
+-   .NET Framework or .NET SDK compatible with C# 7.0+
+-   IDE: Visual Studio / VS Code / Rider
+-   No external libraries required
+
+---
 
 ## 🚀 How to Run
 
-1. Open the solution in Visual Studio (or compile via CLI if organized in a `.sln`).
-2. Set the desired `Program.cs` as the startup file to run specific scenario.
-3. Run the project (F5 or `dotnet run` if using SDK-style).
+1. Open the solution or compile any `Program.cs` manually depending on the stage you want to test.
+2. Run using terminal or IDE debugger.
 
-## 🗒️ Notes
-This project was created for educational purposes. Each version of `Program.cs` and its supporting classes represents an incremental step in C# OOP learning.
+---
+
+## ✅ Status
+
+📘 Educational / In Progress
+
+This repository is not intended for production. It's a step-by-step learning archive built to deepen C# understanding.
